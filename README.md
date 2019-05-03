@@ -8,7 +8,7 @@
 ## Instructions
 
 You must reach the top to win by using arrows!
-![alt text](img/game.png)
+![alt text](images/game.png)
 
 ## Contributing
 
