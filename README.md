@@ -1,4 +1,4 @@
-# Classic Arcade Game Clone Project
+# Classic Arcade Game Project
 
 ## Table of Contents
 
@@ -13,4 +13,4 @@ To play download the file then run the index.html file on the browser.
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+This repository is Classic Arcade Game for _all_ Udacity Front-end.
