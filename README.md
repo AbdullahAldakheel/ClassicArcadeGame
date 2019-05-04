@@ -13,4 +13,4 @@ To play download the file then run the index.html file on the browser.
 
 ## Contributing
 
-This repository is Classic Arcade Game for _all_ Udacity Front-end.
+This repository is Classic Arcade Game for Udacity Front-end.
