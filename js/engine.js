@@ -44,6 +44,7 @@ var Engine = (function(global) {
         /* Call our update/render functions, pass along the time delta to
          * our update function since it may be used for smooth animation.
          */
+        
         update(dt);
         render();
 
@@ -103,6 +104,7 @@ var Engine = (function(global) {
      * they are just drawing the entire screen over and over.
      */
     function render() {
+        
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */

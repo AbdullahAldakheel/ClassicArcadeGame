@@ -1,3 +1,5 @@
+//enemy is class that has two coordinates and speed and image
+
 class Enemy {
     constructor(x, y, s) {
         this.x = x;
@@ -5,6 +7,8 @@ class Enemy {
         this.speed = s;
         this.sprite = 'images/enemy-bug.png';
     }
+        //update is method that set the speed that fits all computers 
+
     update(dt) {
         this.x += this.speed * dt;
         if (this.x > 550) {
@@ -20,11 +24,15 @@ class Enemy {
             }
         }
     }
+        //render is method that get the image and coordinates
+
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
     
 }
+//player is class which has x,y coordinates as well as the image
+
 class Player {
     constructor(x, y) {
         this.x = x;
@@ -32,16 +40,22 @@ class Player {
         this.sprite = 'images/char-boy.png';
     }
   
-    
+        //update is method that checks the position of the player
+
     update(){
        if(this.y == -35){
-            gameOver()
+        this.x = 200
+        this.y = 400
+            gameOver();
+
         }
     }
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 }
+//handle input is method that decide which key is pressed and the corresponding actions to be taken
+
 Player.prototype.handleInput = function (key) {
     switch(key) {
         case 'left':
@@ -68,14 +82,15 @@ Player.prototype.handleInput = function (key) {
             break;
     }
 };
+//initiating the objects
 
 allEnemies = []
 allEnemies.push(new Enemy(-100, 140, Math.random()*100 + 100))
 allEnemies.push(new Enemy(-100, 240, Math.random()*100 + 100))
 allEnemies.push(new Enemy(-100, 80, Math.random()*100 + 100))
-
-
 player = new Player(200,400)
+
+//to handle the collisions between enemy and player
 
 function checkCollisions() {
  
@@ -97,6 +112,7 @@ function checkCollisions() {
    }
 
 }
+//add event listeners to all keys
 
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
@@ -108,25 +124,26 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+//restarting the game when the player wins the game
 
     function restartGame(){
         location.reload();
     }
+//displaing to player when he win
+
     function gameOver(){
         
-    
-    
-      swal({
-        title: "Good job!",
-        text: "Gongrats!",
-        icon: "success",
-        button: "Play Again!",
-      }).then((restartNow) => {
-        if (restartNow) {
-          restartGame();
-        }
-      });
-    
+        swal({
+            title: "Good job!",
+            text: "Gongrats!",
+            icon: "success",
+            button: "Play Again!",
+          }).then((restartNow) => {
+            if (restartNow) {
+              restartGame();
+            }
+          });
+      
       
     }
     
