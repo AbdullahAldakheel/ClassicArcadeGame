@@ -97,15 +97,15 @@ function checkCollisions() {
     if(
         (allEnemies[2].y < player.y+50 && allEnemies[2].y + 50 > player.y)
          && 
-         (allEnemies[2].x < player.x+95 && allEnemies[2].x + 95 > player.x) 
+         (allEnemies[2].x < player.x+93 && allEnemies[2].x + 93 > player.x) 
          ||
          (allEnemies[1].y < player.y+50 && allEnemies[1].y + 50 > player.y)
          && 
-         (allEnemies[1].x < player.x+95 && allEnemies[1].x + 95 > player.x) 
+         (allEnemies[1].x < player.x+93 && allEnemies[1].x + 93 > player.x) 
          ||
          (allEnemies[0].y < player.y+50 && allEnemies[0].y + 50 > player.y)
          && 
-         (allEnemies[0].x < player.x+95 && allEnemies[0].x + 95 > player.x) 
+         (allEnemies[0].x < player.x+93 && allEnemies[0].x + 93 > player.x) 
     )
     {
         player = new Player(200,400);
